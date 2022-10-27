@@ -29,7 +29,7 @@ module.exports = {
       const member = await interaction.guild.members
         .fetch(user.id)
         .catch(console.error);
-      await user.send(reason)
+      await user.send(reason).catch(console.error);
       await member.timeout(time * 60 * 60 * 1000).catch(console.error);
       await interaction.reply({
         content: `Time out ${user.tag} successfully: ${time} hours`,
