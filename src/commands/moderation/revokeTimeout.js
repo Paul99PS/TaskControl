@@ -24,7 +24,7 @@ module.exports = {
       const member = await interaction.guild.members
         .fetch(user.id)
         .catch(console.error);
-      await user.send(reason)
+      await user.send(reason).catch(console.error);
       await member.timeout(null).catch(console.error);
       await interaction.reply({
         content: `Time out ${user.tag} successfully: revoked`,
