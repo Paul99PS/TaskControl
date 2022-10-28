@@ -26,7 +26,7 @@ module.exports = {
       await interaction.editReply({
         content: newMessage,
       });
-      console.log("pbwarn wurde ausgefuehrt");
+      console.log(`pbwarn wurde gegen ${user.tag}ausgefuehrt`);
     } else {
       const newMessage1 = "Keine Berechtigung um dieses Kommando auszuführen";
       await interaction.editReply({

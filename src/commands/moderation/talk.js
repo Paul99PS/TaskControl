@@ -26,7 +26,7 @@ module.exports = {
       await interaction.editReply({
         content: newMessage,
       });
-      console.log("talk wurde ausgefuehrt");
+      console.log(`talk wurde gegen ${user.tag} ausgefuehrt`);
     } else {
       const newMessage1 = "Keine Berechtigung um dieses Kommando auszuführen";
       await interaction.editReply({
