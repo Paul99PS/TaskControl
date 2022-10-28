@@ -20,8 +20,8 @@ module.exports = {
     if (interaction.channel == "1034792203739996230") {
       const NACHRICHT = "HHey Du! \n\nUnserem TASK-Mod-Team ist aufgefallen, dass dein Status nicht unseren Serverrichtlinien entspricht. Wir bitten Dich, entsprechende Änderungen durchzuführen, um ein freundliches und sicheres Zusammensein zu gewährleisten. \nSollte uns auffallen, dass sich keine Besserung zeigt, sind weiterführende Maßnahmen nicht auszuschließen. \nBei Fragen steht das Team gerne zur Verfügung. \nVielen Dank für Dein Verständnis und weiterhin viel Spaß bei TASK Force!";
         
-      const newMessage = "statuswarn wurde ausgefuehrt";
       const user = interaction.options.getUser("target");
+      const newMessage = `statuswarn wurde gegen ${user.tag} ausgefuehrt`;
       user.send({ content: NACHRICHT });
       await interaction.editReply({
         content: newMessage,
