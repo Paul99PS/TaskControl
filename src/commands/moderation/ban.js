@@ -13,18 +13,14 @@ module.exports = {
     .addStringOption(
       (option = option
         .setName("reason")
-        .setDescription(
-          "The reason for ban the member provided which is sent to the member.".setRequired(
-            true
-          )
-        ))
+        .setDescription("The reason for ban the member provided which is sent to the member.")
+        .setRequired(true)
+      )
     )
     .addIntegerOption(
       (option = option
         .setName("days")
-        .setDescription(
-          "The amount of days you want to ban the user, Number must be between 0 and 7"
-        )
+        .setDescription("The amount of days you want to ban the user, Number must be between 0 and 7")
         .setRequired(false))
     ),
 
