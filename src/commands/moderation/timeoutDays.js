@@ -17,7 +17,15 @@ module.exports = {
         .setName("time")
         .setDescription("The amount of days to timeout a member for")
         .setRequired(true)
+    )
+    .addStringOption(
+      ((option) => option
+        .setName("reason")
+        .setDescription("The reason for ban the member provided which is sent to the member.")
+        .setRequired(true)
+      )
     ),
+    
 
   async execute(interaction, client) {
   
@@ -25,11 +33,12 @@ module.exports = {
             
       const user = interaction.options.getUser("target");
       const time = interaction.options.getInteger('time');
-      const reason = `Hey Du! \n\nUnser TASK-Mod-Team sieht sich leider gezwungen, Dir für ${time} Tage einen Time-Out zu geben, da Dein Regelverstoß zu schwerwiegend war oder vorherige Maßnahmen zu keiner Besserung geführt haben. Bitte nutze die Zeit, um dein Verhalten zu überdenken und somit weiteren Maßnahmen vorzubeugen!!\nBei Fragen steht das Team gerne zur Verfügung.\nVielen Dank für Dein Verständnis!`;
+      const reason = interaction.options.getString('reason');
+      const message = `Hey Du! \n\nUnser TASK-Mod-Team sieht sich leider gezwungen, Dir für ${time} Tage einen Time-Out zu geben, da Dein Regelverstoß zu schwerwiegend war oder vorherige Maßnahmen zu keiner Besserung geführt haben. Bitte nutze die Zeit, um dein Verhalten zu überdenken und somit weiteren Maßnahmen vorzubeugen!!\nBei Fragen steht das Team gerne zur Verfügung.\nVielen Dank für Dein Verständnis! \n\nGrund: ${reason}`;
       const member = await interaction.guild.members
         .fetch(user.id)
         .catch(console.error);
-      await user.send(reason).catch(console.error);
+      await user.send(message).catch(console.error);
       await member.timeout(time * 60 * 60 * 24 * 1000).catch(console.error);
       await interaction.reply({
         content: `Time out ${user.tag} successfully: ${time} Tage`,
