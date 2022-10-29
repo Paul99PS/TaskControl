@@ -11,13 +11,12 @@ module.exports = {
         .setDescription("The member you want to kick!")
     )
     .addStringOption(
-      (option = option
+      ((option) => option
         .setName("reason")
         .setDescription(
-          "The reason for kicking the member provided which is sent to the member.".setRequired(
-            true
-          )
-        ))
+          "The reason for kicking the member provided which is sent to the member.")
+          .setRequired(true)
+      )
     ),
 
   async execute(interaction, client) {

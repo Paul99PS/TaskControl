@@ -11,17 +11,17 @@ module.exports = {
         .setDescription("The member you want to ban!")
     )
     .addStringOption(
-      (option = option
+      ((option) => option
         .setName("reason")
         .setDescription("The reason for ban the member provided which is sent to the member.")
         .setRequired(true)
       )
     )
     .addIntegerOption(
-      (option = option
+      ((option) => option
         .setName("days")
         .setDescription("The amount of days you want to ban the user, Number must be between 0 and 7")
-        .setRequired(false))
+        .setRequired(true))
     ),
 
   async execute(interaction, client) {
