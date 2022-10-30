@@ -29,7 +29,7 @@ module.exports = {
 
       await user
         .send({
-          content: `Hey Du! \n\nUnser TASK-Mod-Team sieht sich leider gezwungen, dich vom Server zu kicken, da Dein Regelverstoß zu schwerwiegend war oder vorherige Maßnahmen zu keiner Besserung geführt haben. Bitte überdenke dein Verhalten und joine unserem Server erst wieder wenn du dir über die begangenen Fehler bewusst bist!!\nBei Fragen steht das Team gerne zur Verfügung.\nVielen Dank für Dein Verständnis! \n\n Der Grund für den Kick ist: ${reason}`,
+          content: `Hey Du! \n\nUnser TASK-Mod-Team sieht sich leider gezwungen, dich vom Server zu kicken, da Dein Regelverstoß zu schwerwiegend war oder vorherige Maßnahmen zu keiner Besserung geführt haben. Bitte überdenke dein Verhalten und joine unserem Server erst wieder wenn du dir über die begangenen Fehler bewusst bist!!\nBei Fragen stehen dir gerne SplashyKhan und tomgaming5887 sowie alle V12-Bitrubos gerne zur Verfügung.\nVielen Dank für Dein Verständnis! \n\n Der Grund für den Kick ist: ${reason} \n\nDiese Nachricht wurde automatisch erstellt.`,
         })
         .catch(console.log("Benutzer hat seine DMs ausgeschaltet!"));
 

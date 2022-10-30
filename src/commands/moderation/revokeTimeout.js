@@ -20,7 +20,7 @@ module.exports = {
 
       
       const user = interaction.options.getUser("target");
-      const reason = `Hey Du! \n\nUnser TASK-Mod-Team hat sich entschieden deinen Timeout zurückzuziehen! \nBei Fragen steht das Team gerne zur Verfügung.\nVielen Dank für Dein Verständnis!`;
+      const reason = `Hey Du! \n\nUnser TASK-Mod-Team hat sich entschieden deinen Timeout zurückzuziehen! \nBei Fragen stehen dir gerne SplashyKhan und tomgaming5887 sowie alle V12-Bitrubos gerne zur Verfügung.\nVielen Dank für Dein Verständnis! \n\nDiese Nachricht wurde automatisch erstellt.`;
       const member = await interaction.guild.members
         .fetch(user.id)
         .catch(console.error);

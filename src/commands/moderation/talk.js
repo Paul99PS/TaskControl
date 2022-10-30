@@ -18,7 +18,7 @@ module.exports = {
       fetchReply: true,
     });
     if (interaction.channel == "1034792203739996230") {
-      const NACHRICHT = "Hey Du!\n\nUnser TASK-Mod-Team möchte mit Dir sprechen. Bitte melde Dich so bald wie möglich bei einem Mod und vereinbare einen Gesprächstermin.\nBei Fragen steht das Team gerne zur Verfügung.\nVielen Dank für Dein Verständnis und weiterhin viel Spaß bei TASK Force!";
+      const NACHRICHT = "Hey Du!\n\nUnser TASK-Mod-Team möchte mit Dir sprechen. Bitte melde Dich so bald wie möglich bei einem Mod und vereinbare einen Gesprächstermin.\nBei Fragen stehen dir gerne SplashyKhan und tomgaming5887 sowie alle V12-Bitrubos gerne zur Verfügung.\nVielen Dank für Dein Verständnis und weiterhin viel Spaß bei TASK Force! \n\nDiese Nachricht wurde automatisch erstellt.";
         
       const user = interaction.options.getUser("target");
       const newMessage = `talk wurde gegen ${user.tag} ausgefuehrt`;

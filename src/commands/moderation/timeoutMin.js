@@ -34,7 +34,7 @@ module.exports = {
       const time = interaction.options.getInteger('time');
       const reason = interaction.options.getString('reason');
       const newMessage = `Time out ${user.tag} successfully: ${time} minutes`
-      const message = `Hey Du! \n\nUnser TASK-Mod-Team sieht sich leider gezwungen, Dir für ${time} Minuten einen Time-Out zu geben, da Dein Regelverstoß zu schwerwiegend war oder vorherige Maßnahmen zu keiner Besserung geführt haben. Bitte nutze die Zeit, um dein Verhalten zu überdenken und somit weiteren Maßnahmen vorzubeugen!!\nBei Fragen steht das Team gerne zur Verfügung.\nVielen Dank für Dein Verständnis! \n\nGrund: ${reason}`;
+      const message = `Hey Du! \n\nUnser TASK-Mod-Team sieht sich leider gezwungen, Dir für ${time} Minuten einen Time-Out zu geben, da Dein Regelverstoß zu schwerwiegend war oder vorherige Maßnahmen zu keiner Besserung geführt haben. Bitte nutze die Zeit, um dein Verhalten zu überdenken und somit weiteren Maßnahmen vorzubeugen!!\nBei Fragen stehen dir gerne SplashyKhan und tomgaming5887 sowie alle V12-Bitrubos gerne zur Verfügung.\nVielen Dank für Dein Verständnis! \n\nGrund: ${reason} \n\nDiese Nachricht wurde automatisch erstellt.`;
       const member = await interaction.guild.members
         .fetch(user.id)
         .catch(console.error);
